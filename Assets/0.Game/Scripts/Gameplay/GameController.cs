@@ -21,9 +21,10 @@ namespace _0.Game.Scripts.Gameplay
         private void Awake()
         {
             instance = this;
-            var obj = players[PlayerData.CharacterId];
-            player = Instantiate(obj);
-            player.transform.position = spawnPos.position;
+            player = players[PlayerData.CharacterId];
+            // player = Instantiate(obj);
+            // player.transform.position = spawnPos.position;
+            player.gameObject.SetActive(true);
             cameraFlower.viewTarget = player.cameraRoot;
         }
 

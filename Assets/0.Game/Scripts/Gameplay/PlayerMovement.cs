@@ -76,9 +76,7 @@ namespace _0.Game.Scripts.Gameplay
                 Transform t = orientation ? orientation : transform;
                 t.rotation = Quaternion.Slerp(t.rotation, targetRot, rotationSpeed * Time.deltaTime);
             }
-
-            if (enableJump && Input.GetKeyDown(KeyCode.Space))
-                Jump();
+            
         }
 
         void FixedUpdate()

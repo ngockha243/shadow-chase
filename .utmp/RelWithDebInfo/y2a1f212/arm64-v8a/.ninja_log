@@ -1,0 +1,12 @@
+# ninja log v5
+112	577	7826127897710518	FramePacing/CMakeFiles/swappywrapper.dir/UnitySwappyWrapper.cpp.o	7a2e77a4b540d7bb
+579	830	7826127899929152	D:/Unity Projects/ShadowChase2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/y2a1f212/obj/arm64-v8a/libswappywrapper.so	31b1ec3200e1f20e
+57	1658	7826127908325339	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	3caf7046ee91ac4b
+45	1673	7826127908491682	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	4cd85b6cdc98640e
+0	1720	7826127909010337	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	87e2b7c8a64db2af
+85	1733	7826127909116204	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	af98db9c6a346207
+32	1868	7826127910537397	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	3b86195bfc8e69e1
+72	2073	7826127912684242	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	6b633a06c6bc1926
+98	2097	7826127912941756	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	a0c146eea5305ea2
+16	2194	7826127913882093	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	db3c36f180b6ad18
+2195	2277	7826127914795936	D:/Unity Projects/ShadowChase2/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/y2a1f212/obj/arm64-v8a/libgame.so	4f0b02935b5c419b
