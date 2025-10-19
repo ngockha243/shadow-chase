@@ -68,14 +68,7 @@ namespace _0.Game.Scripts.Gameplay
             desiredMove = (planeRight * joyDir.x + planeForward * joyDir.y);
             if (desiredMove.sqrMagnitude > 1f) desiredMove.Normalize();
 
-            Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-            Vector3 look = flatVel.sqrMagnitude > 0.0001f ? flatVel.normalized : desiredMove;
-            if (look.sqrMagnitude > 0.0001f)
-            {
-                Quaternion targetRot = Quaternion.LookRotation(look, Vector3.up);
-                Transform t = orientation ? orientation : transform;
-                t.rotation = Quaternion.Slerp(t.rotation, targetRot, rotationSpeed * Time.deltaTime);
-            }
+            
             
         }
 
@@ -97,6 +90,16 @@ namespace _0.Game.Scripts.Gameplay
             if (isGrounded && rb.linearVelocity.y < 0f)
             {
                 rb.AddForce(Physics.gravity * 0.5f, ForceMode.Acceleration);
+            }
+            
+            
+            Vector3 flatVel = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+            Vector3 look = flatVel.sqrMagnitude > 0.0001f ? flatVel.normalized : desiredMove;
+            if (look.sqrMagnitude > 0.0001f)
+            {
+                Quaternion targetRot = Quaternion.LookRotation(look, Vector3.up);
+                Transform t = orientation ? orientation : transform;
+                t.rotation = Quaternion.Slerp(t.rotation, targetRot, rotationSpeed * Time.deltaTime);
             }
         }
 
