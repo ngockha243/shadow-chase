@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DG.Tweening;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -18,6 +19,7 @@ namespace _0.Game.Scripts.Gameplay
         public Image lightFill;
         public Text hpText;
         public Text lightText;
+        public Text scoreTxt;
         public TextMeshProUGUI lightCoreCountTxt;
         public SkillActiveUI skill2UI;
         public SkillActiveUI skill3UI;
@@ -35,6 +37,18 @@ namespace _0.Game.Scripts.Gameplay
             }
         }
 
+        public void OnHighestScore()
+        {
+            scoreTxt.color = Color.yellow;
+            scoreTxt.transform.DOScale(1.2f, 0.15f).OnComplete(() =>
+            {
+                scoreTxt.transform.DOScale(1, 0.15f);
+            });
+        }
+        public void OnChangeScore(int score)
+        {
+            scoreTxt.text = score.ToString();
+        }
         public void PauseClick()
         {
             AudioManager.ins?.PlayButtonClick();

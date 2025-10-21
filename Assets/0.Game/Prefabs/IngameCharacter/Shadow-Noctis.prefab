@@ -238,7 +238,6 @@ GameObject:
   - component: {fileID: 4090394060270420284}
   - component: {fileID: 7044185900192154282}
   - component: {fileID: 1107267840967097930}
-  - component: {fileID: 8245884190146432654}
   - component: {fileID: 2160886739645239825}
   - component: {fileID: 8939917924184375950}
   m_Layer: 0
@@ -330,7 +329,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_0.Game.Scripts.PlayerController
   movement: {fileID: 1107267840967097930}
-  stats: {fileID: 8245884190146432654}
+  stats: {fileID: 11400000, guid: 0bfae3fbf663df14bb12981497f0c045, type: 2}
   anim: {fileID: 8939917924184375950}
   light: {fileID: 5400454143207052982}
   lightCoreObj: {fileID: 0}
@@ -366,24 +365,6 @@ MonoBehaviour:
   groundCheckRadius: 0.2
   groundCheckOffset: 0.05
   maxGroundAngle: 55
---- !u!114 &8245884190146432654
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8846193547228624797}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1b06442e2c8420abf3417fff55ec2fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::_0.Game.Scripts.Gameplay.PlayerStats
-  movementSpeed: 5
-  lightRadius: 10
-  maxHP: 100
-  darknessToleranceSec: 3
-  darknessDamagePerSec: 10
-  lightDecay: 1
 --- !u!114 &2160886739645239825
 MonoBehaviour:
   m_ObjectHideFlags: 0

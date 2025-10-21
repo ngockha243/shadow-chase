@@ -9,6 +9,11 @@ namespace _0.Game.Scripts
     {
         public static Action onChangeCoin;
 
+        public static int HighScore
+        {
+            get => PlayerPrefs.GetInt("HighScore",0);
+            set => PlayerPrefs.SetInt("HighScore", value);
+        }
         public static int LoginCount
         {
             get => PlayerPrefs.GetInt("LoginCount", 1);

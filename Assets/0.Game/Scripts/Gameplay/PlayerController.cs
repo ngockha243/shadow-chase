@@ -109,7 +109,7 @@ namespace _0.Game.Scripts.Gameplay
         {
             currentLightRange += amount;
             if (clampToMax) currentLightRange = Mathf.Min(currentLightRange, maxLightRange);
-
+            GameController.instance.score += 100;
             if (currentLightRange > 0) darknessTimer = 0f;
         }
 

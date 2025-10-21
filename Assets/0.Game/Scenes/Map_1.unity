@@ -39156,6 +39156,7 @@ MonoBehaviour:
   countLight: 0
   lightBoost: 1
   gameSpeed: 1
+  score: 0
 --- !u!4 &1401739064
 Transform:
   m_ObjectHideFlags: 0
@@ -59090,14 +59091,6 @@ PrefabInstance:
     - target: {fileID: 3248720568465449210, guid: c0e684ed71bb49f40b118cc78cb9389d, type: 3}
       propertyPath: m_Name
       value: GameplayUI
-      objectReference: {fileID: 0}
-    - target: {fileID: 3663596966614117732, guid: c0e684ed71bb49f40b118cc78cb9389d, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -66.900024
-      objectReference: {fileID: 0}
-    - target: {fileID: 3663596966614117732, guid: c0e684ed71bb49f40b118cc78cb9389d, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -80.8999
       objectReference: {fileID: 0}
     - target: {fileID: 5555326043062488938, guid: c0e684ed71bb49f40b118cc78cb9389d, type: 3}
       propertyPath: m_AnchorMax.y

@@ -14,10 +14,13 @@ namespace _0.Game.Scripts.Gameplay
         public LightCoreController lightCore;
         public CameraFlower cameraFlower;
         public int countLight = 0;
-
         public int lightBoost = 1;
         public float gameSpeed = 1;
-
+      
+        private int highScore;
+        private float scoreFloat;
+        private bool reachedHighScore;
+        public int score;
         private void Awake()
         {
             instance = this;
@@ -26,8 +29,28 @@ namespace _0.Game.Scripts.Gameplay
             // player.transform.position = spawnPos.position;
             player.gameObject.SetActive(true);
             cameraFlower.viewTarget = player.cameraRoot;
+            score = 0;
+            highScore = PlayerData.HighScore;
         }
 
+        private void Update()
+        {
+            scoreFloat += Time.deltaTime * 125f;
+            score = (int)scoreFloat;
+
+            GameplayUIController.instance.OnChangeScore(score);
+            if (!reachedHighScore && score > highScore)
+            {
+                reachedHighScore = true;
+
+                GameplayUIController.instance.OnHighestScore();
+            }
+        }
+
+        private void OnDestroy()
+        {
+            if (score > highScore) PlayerData.HighScore = score;
+        }
 
         public void CollectLightCore()
         {

@@ -2,7 +2,8 @@ using UnityEngine;
 
 namespace _0.Game.Scripts.Gameplay
 {
-    public class PlayerStats : MonoBehaviour
+    [CreateAssetMenu(fileName = "CharacterData", menuName = "CharacterData")]
+    public class PlayerStats : ScriptableObject
     {
         [SerializeField] private float movementSpeed = 5f;
         [SerializeField] private float lightRadius = 5f;
