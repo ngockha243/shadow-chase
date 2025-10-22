@@ -57,16 +57,19 @@ namespace _0.Game.Scripts.Gameplay
         public void PlayerSkill1()
         {
             GameController.instance.ActiveSkill1();
+            AudioManager.ins?.PlayButtonClick();
         }
 
         public void PlayerSkill2()
         {
             GameController.instance.ActiveSkill2();
+            AudioManager.ins?.PlayButtonClick();
         }
 
         public void PlayerSkill3()
         {
             GameController.instance.ActiveSkill3();
+            AudioManager.ins?.PlayButtonClick();
         }
 
         public void SetLightCoreTxt(int value)
@@ -88,6 +91,7 @@ namespace _0.Game.Scripts.Gameplay
         public void HandCollectClick()
         {
             handButton.gameObject.SetActive(false);
+            AudioManager.ins?.PlayCollect();
             GameController.instance.CollectLightCore();
         }
 

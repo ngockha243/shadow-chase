@@ -20316,6 +20316,75 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 6bdfdae86ac82ea4982ee6637f3d9e49, type: 3}
   m_PrefabInstance: {fileID: 1096867347}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &762774752
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 100000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_Name
+      value: FrostExampleCamera_sharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1321.4299
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 999.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_Depth
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2000000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: m_ClearFlags
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 11400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+      propertyPath: FrostAmount
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
 --- !u!1001 &764911471
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -39143,7 +39212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: da7700811bb643e8a8545a9e446a8eea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::_0.Game.Scripts.GameController
-  spawnPos: {fileID: 1784603678683061348}
+  frostEffect: {fileID: 1505971417}
   players:
   - {fileID: 1949996224}
   - {fileID: 2032028850}
@@ -39157,6 +39226,7 @@ MonoBehaviour:
   lightBoost: 1
   gameSpeed: 1
   score: 0
+  gameOver: 0
 --- !u!4 &1401739064
 Transform:
   m_ObjectHideFlags: 0
@@ -40927,6 +40997,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: fdfba731290b01147a2aba5e3209a02d, type: 3}
   m_PrefabInstance: {fileID: 298312041}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1505971417 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 11400000, guid: 49e34ceac6c30c248aec6019ef366b76, type: 3}
+  m_PrefabInstance: {fileID: 762774752}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9044ef733a99ffa4aa7a986bb5e9a7f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1506360737 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: e00599f3b0592fd48b8e856c8c794afe, type: 3}
@@ -48113,7 +48194,7 @@ Camera:
   m_Depth: 0
   m_CullingMask:
     serializedVersion: 2
-    m_Bits: 2007
+    m_Bits: 23
   m_RenderingPath: -1
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
@@ -59229,3 +59310,4 @@ SceneRoots:
   - {fileID: 1349756261}
   - {fileID: 1466190983}
   - {fileID: 261250997}
+  - {fileID: 762774752}

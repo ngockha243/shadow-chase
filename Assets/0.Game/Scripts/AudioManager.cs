@@ -17,6 +17,10 @@ namespace _0.Game.Scripts
         public AudioClip jump;
         public AudioClip win;
         public AudioClip lose;
+        public AudioClip skill1;
+        public AudioClip skill2;
+        public AudioClip skill3;
+        public AudioClip collect;
         private AudioSource _musicSrc;
         private AudioSource _sfxSrc;
         private AudioSource _sfxCollider;
@@ -74,7 +78,6 @@ namespace _0.Game.Scripts
             _sfxCollider.volume = PlayerData.SfxVolume;
         }
 
-        // Nút phổ biến
         public void PlayButtonClick() => PlaySfx(clickClip);
         public void PlayWrong() => PlaySfx(wrong);
         public void PlayRight() => PlaySfx(right);
@@ -86,5 +89,10 @@ namespace _0.Game.Scripts
         public void PlayJump() => PlaySfx(jump);
         public void PlayWin() => PlaySfx(win);
         public void PlayLose() => PlaySfx(lose);
+        
+        public void PlaySkill1() => PlaySfx(skill1);
+        public void PlaySkill2() => PlaySfx(skill2);
+        public void PlaySkill3() => PlaySfx(skill3);
+        public void PlayCollect() => PlaySfx(collect);
     }
 }

@@ -17,6 +17,7 @@ namespace _0.Game.Scripts.Menu
         public GameObject buttonPlay;
         public Text characterNameText;
         public Text priceTxt;
+        public Text highScoreTxt;
         public TextMeshProUGUI moveSpeedText;
         public TextMeshProUGUI lightRadiusText;
         public TextMeshProUGUI healthText;
@@ -27,6 +28,7 @@ namespace _0.Game.Scripts.Menu
         {
             instance = this;
             PlayerPrefs.SetInt($"CharacterUnlocked_0", 1);
+            highScoreTxt.text = $"{PlayerData.HighScore}";
         }
 
         private void Start()

@@ -20,11 +20,10 @@ namespace _0.Game.Scripts.Gameplay
 
         public void Active(float time)
         {
-            duration = Mathf.Max(0.01f, time); // tránh chia 0
+            duration = Mathf.Max(0.01f, time); 
             currentTime = 0f;
             isActive = true;
 
-            // Bắt đầu từ fill = 0 (chạy lên 1)
             if (fill) fill.fillAmount = 0f;
             gameObject.SetActive(true);
         }

@@ -19,7 +19,6 @@ namespace _0.Game.Scripts.Gameplay
             float originalRange = light.range;
             float t = 0f;
 
-            // --- Giai đoạn tăng sáng ---
             while (t < riseTime)
             {
                 t += Time.deltaTime;
@@ -28,7 +27,6 @@ namespace _0.Game.Scripts.Gameplay
                 yield return null;
             }
 
-            // --- Giai đoạn giảm sáng về 0 ---
             t = 0f;
             float startRange = light.range;
             while (t < fadeTime)
@@ -39,7 +37,7 @@ namespace _0.Game.Scripts.Gameplay
                 yield return null;
             }
 
-            light.range = 0f; // đảm bảo về 0 hoàn toàn
+            light.range = 0f; 
         }
     }
 }
