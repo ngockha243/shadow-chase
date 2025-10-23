@@ -29,6 +29,7 @@ namespace _0.Game.Scripts.Menu
             instance = this;
             PlayerPrefs.SetInt($"CharacterUnlocked_0", 1);
             highScoreTxt.text = $"{PlayerData.HighScore}";
+            Application.targetFrameRate = 60;
         }
 
         private void Start()

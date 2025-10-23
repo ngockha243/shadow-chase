@@ -1179,7 +1179,7 @@ namespace RapidIconUIC
 					{
 						foreach (MaterialProperty prop in props)
 						{
-							if (prop.name != "_MainTex" && prop.propertyFlags != UnityEngine.Rendering.ShaderPropertyFlags.HideInInspector)
+							if (prop.name != "_MainTex")
 							{
 								materialEditor.ShaderProperty(prop, prop.displayName);
 							}
