@@ -39,7 +39,7 @@ namespace _0.Game.Scripts.Gameplay
         private void Update()
         {
             if (gameOver) return;
-            scoreFloat += Time.deltaTime * 75f;
+            scoreFloat += Time.deltaTime * 2f;
             score = (int)scoreFloat;
 
             GameplayUIController.instance.OnChangeScore(score);
@@ -63,6 +63,18 @@ namespace _0.Game.Scripts.Gameplay
             var core = player.lightCoreObj;
             this.lightCore.RemoveLight(core);
             player.AddLight(1);
+
+            scoreFloat += 10;
+            score = (int)scoreFloat;
+            
+            GameplayUIController.instance.OnChangeScore(score);
+            if (!reachedHighScore && score > highScore)
+            {
+                reachedHighScore = true;
+
+                GameplayUIController.instance.OnHighestScore();
+            }
+            
             GameplayUIController.instance.SetLightCoreTxt(countLight);
         }
 
@@ -101,7 +113,7 @@ namespace _0.Game.Scripts.Gameplay
         {
             AudioManager.ins?.PlaySkill3();
             float time = 10;
-            gameSpeed = 0.5f;
+            gameSpeed = 0.15f;
             DOTween.To(() => frostEffect.FrostAmount,   
                 x => frostEffect.FrostAmount = x,  
                 0.25f,                             
